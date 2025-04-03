@@ -18,6 +18,13 @@
             <topic>/cmd_vel</topic>
             
             <!-- Output -->
+            <frame_id>odom</frame_id>
+            <child_frame_id>base_link</child_frame_id>
+
+            <odom_topic>odom</odom_topic>
+            <odom_publisher_frequency>30</odom_publisher_frequency>
+
+            <tf_topic>/tf</tf_topic>
 
         </plugin>
 
@@ -26,8 +33,7 @@
              <topic>joint_states</topic>
              <joint_name>left_wheel_joint</joint_name>
              <joint_name>right_wheel_joint</joint_name>
-         </plugin>
-
+        </plugin>
     </gazebo>
 
 </robot>
