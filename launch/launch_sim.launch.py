@@ -1,6 +1,6 @@
 import os
 
-from amnet_index_python.packages import get_package_share_directory
+from ament_index_python.packages import get_package_share_directory
 
 from launch import LaunchDescription
 from launch.actions import IncludeLaunchDescription
@@ -24,7 +24,7 @@ def generate_launch_description():
     # Include the Gazebo launch file, provided by the ros_gz_sim package
     gazebo = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
-                    get_package_share_directory('ros_gz_sim'), 'launch', 'gazebo.launch.py')]),
+                    get_package_share_directory('ros_gz_sim'), 'launch', 'gz_sim.launch.py')]),
                     launch_arguments={'gz_args': ['-r -v4 ', '/home/ubuntu/dev_ws/src/my_bot/worlds/empty.world'], 'on_exit_shutdown': 'true'}.items()
              )
 
@@ -41,5 +41,3 @@ def generate_launch_description():
         gazebo,
         spawn_entity,
     ])
-
-    ros2 launch ros_gz_sim_sim gz_sim.launch.py gz_args:=/home/ubuntu/dev_ws/src/my_bot/worlds/empty.world
