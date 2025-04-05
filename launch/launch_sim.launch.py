@@ -25,7 +25,7 @@ def generate_launch_description():
     gazebo = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
                     get_package_share_directory('ros_gz_sim'), 'launch', 'gz_sim.launch.py')]),
-                    launch_arguments={'gz_args': ['-r -v4 ', '/home/ubuntu/dev_ws/src/my_bot/worlds/empty.world'], 'on_exit_shutdown': 'true'}.items()
+                    launch_arguments={'gz_args': ['-r -v4 ', '/home/ubuntu/dev_ws/src/my_bot/worlds/obstacles.world'], 'on_exit_shutdown': 'true'}.items()
              )
 
     # Run the spawner node from te ros_gz_sim_package. The entity name doesn't really matter if you only have...
