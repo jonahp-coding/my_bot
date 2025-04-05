@@ -30,10 +30,10 @@ def generate_launch_description():
 
     # Run the spawner node from te ros_gz_sim_package. The entity name doesn't really matter if you only have...
     spawn_entity = Node(package='ros_gz_sim', executable='create',
-                       arguments=['topic', 'robot_description',
-                                  '-name', 'jonah_bot',
-                                  '-z', '0.1'],
-                       output='screen')
+                        arguments=['-topic', 'robot_description',
+                                   '-name', 'jonah_bot',
+                                   '-z', '0.1'],
+                        output='screen')
     
     # Launch them all!
     return LaunchDescription([
