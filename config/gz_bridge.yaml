@@ -4,7 +4,7 @@
   gz_type_name: "gz.msgs.Clock"
   direction: GZ_TO_ROS
 
-- ros_topic_name: "cml_vel"
+- ros_topic_name: "cmd_vel"
   gz_topic_name: "cmd_vel"
   ros_type_name: "geometry_msgs/msg/Twist"
   gz_type_name: "gz.msgs.Twist"
