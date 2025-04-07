@@ -148,7 +148,7 @@
     <joint name="caster_wheel_joint" type="fixed">
         <parent link="chassis"/>
         <child link="caster_wheel"/>
-        <origin xyz="0.2 0 -0.0225"/>
+        <origin xyz="0.2 0 -0.0165"/>
     </joint>
 
     <link name="caster_wheel">
@@ -170,5 +170,10 @@
         </xacro:inertial_sphere>
 
     </link>
+
+    <gazebo reference="caster_wheel">
+        <mu1 value="0.001"/>
+        <mu2 value="0.001"/>
+    </gazebo>
 
 </robot>
